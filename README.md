@@ -3,7 +3,17 @@
 This gem makes easy to define and load your's application constants using YAML files.
 
 ## Usage
-How to use my plugin.
+
+It's quite simple to use it, plug, confire and have access to your constants. For instance:
+
+```rb
+# initializers/01_constants.rb
+
+FastConstants.configuration do |config|
+  config.directory = Rails.root.join('config/constants/*.yml')
+  config.name = 'MyConstants'
+end
+```
 
 ## Installation
 Add this line to your application's Gemfile:
